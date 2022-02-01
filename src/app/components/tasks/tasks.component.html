@@ -1,0 +1,16 @@
+<!-- 
+  i
+  The directives ngFor loops through each doc in the array tasks 
+  It is like foreach
+
+  ii
+  set the property/target array [task] to be equal to indivisual task doc in the array  
+-->
+<app-task-item *ngFor="let task of tasks" [task]="task"></app-task-item>
+
+
+<!-- 
+  <app-task-item *ngFor="let task of tasks" [task]="task">
+    {{task.text}}
+  </app-task-item> 
+-->

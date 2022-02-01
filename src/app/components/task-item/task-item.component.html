@@ -1,0 +1,14 @@
+<!-- 
+  The following expression {{}} points/has access to each document in the array Task
+-->
+<div class="task">
+  <h3>
+    {{ task.text }} 
+    <!-- icon X -->
+    <fa-icon 
+      [ngStyle]="{'color': 'red'}"
+      [icon]="faTimes">
+    </fa-icon>
+  </h3>
+  <p>{{ task.day }}</p>
+</div>

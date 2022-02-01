@@ -8,5 +8,9 @@
     those fields are initialized in the class buttonComponent (button.component.ts)   
      
   -->
-  <app-button color="green" text="Add"></app-button>
+  <app-button 
+  color="green" 
+  text="Add"
+  (btnClick)="toggleAddTask()"
+  ></app-button>
 </header>

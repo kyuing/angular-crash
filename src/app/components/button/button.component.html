@@ -1,4 +1,8 @@
 <!-- directives example -->
-<button [ngStyle]="{'background-color': color}" class="btn">
+<button 
+  [ngStyle]="{'background-color': color}" 
+  class="btn"
+  (click)="onClick()"
+>
   {{ text }}
 </button>
