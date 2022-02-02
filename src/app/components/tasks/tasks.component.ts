@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../../services/task.service';
 import { Task } from '../../Task';  // interface/DB schema
-import { TASKS } from '../../mock-tasks'  //import actual documents in the data 
+// import { TASKS } from '../../mock-tasks'  //import actual documents in the data 
 
 @Component({
   selector: 'app-tasks',
@@ -9,12 +10,23 @@ import { TASKS } from '../../mock-tasks'  //import actual documents in the data
 })
 export class TasksComponent implements OnInit {
 
-  // global/public array variable tasks
-  // reference the interface Task
-  tasks: Task[] = TASKS;
+  //declare and init the array task 
+  tasks: Task[] = [];
 
-  constructor() { }
+  //private constructor where instantiates obj of the class TaskService 
+  constructor(private taskService: TaskService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
+  }
+
+  //filter the deleted task out of UI
+  deleteTask(task: Task) {
+    this.taskService.deleteTask(task).subscribe(
+      () => (this.tasks = this.tasks.filter(
+        (t) => t.id !== task.id
+      )
+    ));
+  }
 
 }
