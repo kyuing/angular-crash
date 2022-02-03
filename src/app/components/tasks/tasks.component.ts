@@ -29,4 +29,11 @@ export class TasksComponent implements OnInit {
     ));
   }
 
+  toggleReminder(task: Task) {
+    //just change current value to the opposite.
+    task.reminder = !task.reminder;
+    // console.log(task.reminder);
+    this.taskService.updateTaskReminder(task).subscribe();
+  }
+
 }

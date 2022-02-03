@@ -1,8 +1,13 @@
 <!-- 
-  The following expression {{}} points/has access to each document in the array Task
+  if reminder is true, set the class reminder. 
+  Also, the css for this will apply at .task.reminder in task-item.component.css  
+
+  on double clicking a task, change the value of the reminder to be true, vice versa.
 -->
-<div class="task">
+<div [ngClass]="{reminder: task.reminder}" class="task"
+  (dblclick)="onToggle(task)">
   <h3>
+    <!-- The expression {{}} points/has access to each document in the array Task -->
     {{ task.text }} 
     
     <!-- 
@@ -17,3 +22,4 @@
   </h3>
   <p>{{ task.day }}</p>
 </div>
+
