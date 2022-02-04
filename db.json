@@ -23,6 +23,12 @@
       "text": "Test",
       "day": "May 7th at 12:30pm",
       "reminder": false
+    },
+    {
+      "text": "Testing adding a task",
+      "day": "Feb 4th at 16:20pm",
+      "reminder": true,
+      "id": 5
     }
   ]
 }
