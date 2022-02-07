@@ -1,3 +1,8 @@
+# AngularCrash tutorial
+https://youtu.be/3dHNOWTI7H8
+
+
+
 # AngularCrash
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.

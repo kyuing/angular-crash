@@ -6,11 +6,13 @@
     which is <app-button></app-button>
     with fields static value.
     those fields are initialized in the class buttonComponent (button.component.ts)   
-     
+    
+    show add btn if hasRoute('/') == true
   -->
   <app-button 
-  color="{{ showAddTask ? 'red' : 'green'}}" 
-  text="{{ showAddTask ? 'Close' : 'Add'}}"
-  (btnClick)="toggleAddTask()"
+    *ngIf="hasRoute('/')"
+    color="{{ showAddTask ? 'red' : 'green'}}" 
+    text="{{ showAddTask ? 'Close' : 'Add'}}"
+    (btnClick)="toggleAddTask()"
   ></app-button>
 </header>
