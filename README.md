@@ -1,6 +1,18 @@
 # AngularCrash tutorial
 https://youtu.be/3dHNOWTI7H8
 
+# else
+https://stackoverflow.com/questions/67620400/new-angular-project-does-not-include-e2e-folder
+
+
+e2e is not in use.
+
+
+The Future of Protractor
+
+The Angular team has been working with the community to determine the future of Protractor. We’re currently reviewing the feedback shared in the RFC. We’re still figuring out the best future for Protractor. <b>We’ve opted to not include it in new projects and, instead, provide options with popular 3rd party solutions in the Angular CLI.</b> We are currently working with Cypress, WebdriverIO, and TestCafe to help users adopt the alternative solutions. More information to come as this develops.
+
+blog.angular.io/angular-v12-is-now-available-32ed51fbfd49
 
 
 # AngularCrash
